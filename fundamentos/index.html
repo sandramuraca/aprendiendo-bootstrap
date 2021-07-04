@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- la clase container ya esta creada en bootstrap, despega del borde izq y se centra automaticamente (se puede utilizar container-fluid) -->
+
+    <!-- Grilla en bootstrap, se escribe siempre un contenedor, se crea el row y dentro las columnas siempre se usan estas clases y el tamaño standar son 12 columnas SIEMPRES  a partir de ahi se hacen las divisiones-->
+    
+    <div class="container">
+
+        <h3>Grilla Bootstrap - Ejemplos</h3>
+        
+        <p>Para hacer una grilla <em>siempre se calculan 12 columnas como ancho total</em>.</p>
+        <p>Siempre se genera un <em>div con clase row</em> y dentro la cantidad de divs como cantidad de columnas quiera generar, a esos divs le voy a agregar la clase que corresponda para idicar la cantidad de espacios de la grilla que van a utilizar.</p>
+        <p><strong>Ejemplo 1</strong> Construcción de Grilla</p>
+        <p>Cada columna ocupa <strong>1</strong> espacio de los 12 del ancho total</p>
+        <div class="row">
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+            <div class="col-1 border">1 </div>
+        </div>
+        <br>
+
+        <!--convertir las 12 columnas en 3 (12/3)  -->
+        <p>Para hacer 3 columnas se utiliza la clase col-4 por que para hacer 3 columas utilizo 4 espacios de los 12 del ancho total:</p>
+        <p><strong>Ejemplo 2</strong> Construcción de Grilla</p>
+        <div class="row">
+            <div class="col-4 border">3 col - 4 espacios</div>
+            <div class="col-4 border">3 col - 4 espacios</div>
+            <div class="col-4 border">3 col - 4 espacios</div>
+        </div>
+        <br>
+
+        <!--convertir las 12 columnas en 4 (12/4)  -->
+        <p>Para hacer 4 columnas tengo que tomar 3 espacios, se usa la clase col-3 eso quiere decir que cada columna tiene un ancho de 3 espacios de los 12 totales:</p>
+
+        <p><strong>Ejemplo 3</strong> Construcción de Grilla</p>
+        <div class="row">
+            <div class="col-3 border">4 col - 3 espacios</div>
+            <div class="col-3 border">4 col - 3 espacios</div>
+            <div class="col-3 border">4 col - 3 espacios</div>
+            <div class="col-3 border">4 col - 3 espacios</div>
+        </div>
+        <br>
+
+        <!--5 columnas-->
+        <p>Si hago 5 columnas con 3 espacios, la ultima se acomoda por debajo</p>
+        <p><strong>Ejemplo 4</strong>Contrucción de Grilla</p>
+        <div class="row">
+            <div class="col-3 border">5 col</div>
+            <div class="col-3 border">5 col</div>
+            <div class="col-3 border">5 col</div>
+            <div class="col-3 border">5 col</div>
+            <div class="col-3 border">5 col</div>
+        </div>
+        <br>
+        <p>Si quiero que la ultima columna utilice el espacio completo del ancho del dispositivo le tengo que decir que utilice los 12 espacios:</p>
+        <p><strong>Ejemplo 5</strong> Contrucción de Grilla</p>
+        <div class="row">
+            <div class="col-3 border">col 1 - 3 espacios</div>
+            <div class="col-3 border">col 2 - 3 espacios</div>
+            <div class="col-3 border">col 3 - 3 espacios</div>
+            <div class="col-3 border">col 4 - 3 espacios</div>
+            <div class="col-12 border">col 5 - 12 espacios</div>
+        </div>
+        <br>
+        
+        <!--Breackpoints-->
+        <p>Los ejemplos anteriores se adaptan al ancho del dispositivo, sin variar la disposición de las columnas, salvo que la cantidad de espacios por columas exceda los 12 espacios del ancho (ejempo 5), es decir que las columas varian su ancho, pero no se hacen responsivas, para que se hagan responsivas y se ubiquen una debajo de la otra hay que indicar en que breack point quiero que las columnas se ubiquen una debajo de otra, esto se hace con las indicaciones de la documentación de bootstrap:</p>
+        <a href="https://getbootstrap.com/docs/5.0/layout/breakpoints/" >Docs-->Layout-->Breackponits-->Available breakpoints</a>
+        <p>Es decir que a la clase col se le agrega la "Class infix" indicada en la documentación que corresponde al Breackponit que queremos que utilice.</p>
+        
+        <!--Sin breackpoints-->
+        <p><strong>Ejemplo 1</strong> Responsive pantallas pequeñas</p>
+        <p>Si utilizo la clase col-12 generara <em>N</em> cantidad de filas una debajo de la otra que adaptaran su ancho al ancho del dispositivo.</p>
+        <p>Cada vez que indico un breack, es desde esa medida de pantalla para arriba.</p>
+        <div class="row">
+            <div class="col-12 border">ancho total</div>
+            <div class="col-12 border">ancho total</div>
+            <div class="col-12 border">ancho total</div>
+            <div class="col-12 border">ancho total</div>
+            <div class="col-12 border">ancho total</div>
+        </div>
+        <br>
+
+        <!--Breackpoint 576px - clase sm-->
+        <p><strong>Ejemplo 2</strong> Responsive breack 576 px</p>
+        <p>Si utilizo la clase col-12 col-sm-6 le indico que en las pantallas mayores a 576px las columnas se partan en 2 (cada columna utiliza 6 espacios)</p>
+        <div class="row">
+            <div class="col-12 col-sm-6 border">ancho total</div>
+            <div class="col-12 col-sm-6 border">ancho total</div>
+            <div class="col-12 col-sm-6 border">ancho total</div>
+            <div class="col-12 col-sm-6 border">ancho total</div>
+            <div class="col-12 col-sm-12 border">ancho total</div>
+        </div>
+        <br>
+
+        <!--Breackpoint 768px - clase md -->
+        <p><strong>Ejemplo 3</strong> Responsive breack 768 px</p>
+        <p>Si utilizo la clase col-12 col-sm-6 le indico que en las pantallas mayores a 576px las columnas se partan en 2 (cada columna utiliza 6 espacios). Quiero ademas que a los 768 px transformen en 3 columnas: voy a utilizar la clase col-md-4 seguida a la anterior.</p>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 border">1</div>
+            <div class="col-12 col-sm-6 col-md-4 border">2</div>
+            <div class="col-12 col-sm-6 col-md-4 border">3</div>
+            <div class="col-12 col-sm-6 col-md-4 border">4</div>
+            <div class="col-12 col-sm-12 col-md-4 border">5</div>
+        </div>
+        <p>En el ejemplo 3, las 2 ultimas columnas no ocupan el 100% del ancho, eso es por que a ellas les tengo que indicar que en md no ocupen 4 espacios si no 6:</p>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 border">1</div>
+            <div class="col-12 col-sm-6 col-md-4 border">2</div>
+            <div class="col-12 col-sm-6 col-md-4 border">3</div>
+            <div class="col-12 col-sm-6 col-md-6 border">4</div>
+            <div class="col-12 col-sm-12 col-md-6 border">5</div>
+        </div>
+        <p>Esta logica se repite en cada breack que quiero aplicar, <em>siempre dejar en la primer indicacion un col-12 para dispositivos pequeños.</em> </p>
+    </div>
+    
+
+</body>
+</html>
